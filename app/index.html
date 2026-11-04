@@ -5233,7 +5233,13 @@ body:not(.day) .att-n{color:#8cc8ff}
 .dotm{position:absolute}.dotm::after{content:"";position:absolute;inset:-12px}
 .back{min-height:36px;padding:6px 8px}
 /* top bar clock: time centred over one tidy row, badges sit clear of the icons */
-.clock{text-align:center}.clock small{justify-content:center;gap:8px}
+/* top bar: time and date share one centre line, Live is its own small pill, weather text sits left of nothing odd */
+.clock{display:grid;grid-template-columns:auto auto;column-gap:10px;align-items:center;justify-items:center;text-align:center}
+.clock small{display:contents}
+.clock #clock{grid-column:1;grid-row:1}.clock #date{grid-column:1;grid-row:2;color:var(--text2);font-size:11px;line-height:1.2;white-space:nowrap}
+.clock .live{grid-column:2;grid-row:1/span 2;margin:0;padding:3px 9px;border-radius:99px;background:color-mix(in srgb,var(--ok) 15%,transparent);font-size:11px;line-height:1.2}
+.clock .live.ahead{padding:3px 9px}
+.wx{gap:9px;text-align:left}.wx span{display:flex;flex-direction:column;align-items:flex-start;text-align:left}
 .bell .badge{left:auto;right:-4px;top:-3px;min-width:18px;height:18px;padding:0 5px;font-size:11px;box-sizing:border-box}
 /* forms: long option text must not widen a column */
 .two{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.fld{min-width:0}.fld input,.fld select,.fld textarea{width:100%;min-width:0;box-sizing:border-box;text-overflow:ellipsis}.modal{overflow-x:hidden}@media(max-width:520px){.two{grid-template-columns:minmax(0,1fr)}}
