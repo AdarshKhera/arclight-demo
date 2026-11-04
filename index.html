@@ -43,6 +43,8 @@ img { max-width: 100%; display: block; height: auto }
 .shell { max-width: var(--wide); margin: 0 auto }
 .col { max-width: var(--col) }
 
+.by { margin: .6rem 0 0; font-size: 1.05rem; color: var(--dark-muted) }.by b { color: var(--dark-ink); font-weight: 600 }
+.wip { margin: 1rem 0 0; max-width: 40rem; padding: .7rem 1rem; border-radius: .7rem; background: var(--dark-raised); border: 1px solid var(--dark-line); font-size: .92rem; line-height: 1.5; color: var(--dark-muted) }.wip b { color: var(--dark-ink) }
 .label { font: 500 .75rem/1.2 var(--mono); letter-spacing: .13em; text-transform: uppercase; color: var(--muted); margin: 0 }
 h1, h2, h3 { text-wrap: balance; margin: 0; font-weight: 600 }
 .h1 { font-size: clamp(2.75rem, 7vw, 5rem); line-height: 1; letter-spacing: -.04em }
@@ -183,11 +185,13 @@ tr.us td:first-child { color: var(--blue) }
 <!-- HERO -->
 <header class="band dark hero">
   <div class="shell">
-    <p class="label">Build case study · Adarsh Khera</p>
+    <p class="label">Build case study · Beta</p>
     <div class="pills">
       <span class="pill">AI data centre operations</span><span class="pill">3D digital twin</span><span class="pill">Solo build</span><span class="pill live">Working prototype</span><span class="pill">5 min read</span>
     </div>
     <h1 class="h1">Arclight</h1>
+    <p class="by">By <b>Adarsh Khera</b></p>
+    <p class="wip"><b>Work in progress.</b> Arclight is in beta. The prototype and this case study are still being built, so screens, numbers and copy will change.</p>
     <p class="lede">One screen to run an AI data centre campus. See what is happening and what it earns, fix what breaks, control who walks in, and prove it all to the auditor. I designed and directed it, and Claude Code wrote the code.</p>
     <div class="cta"><a href="app/">Open the live prototype <span aria-hidden="true">→</span></a><a class="ghost" href="#pitch">Read the case study</a></div>
     <figure class="hero-fig">
